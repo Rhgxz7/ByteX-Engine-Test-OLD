@@ -14,9 +14,9 @@ Vulkan is the future of graphics, but right now it doesent support some older ha
 support OpenGL.
 
 __*Graphic APIs*__
-- OpenGL: 4.6 (Supported at early development state)
-- Vulkan: 1.2 (Supported at early development state)
-- DirectX: 11 (Supported at later development state)
+- OpenGL: 4.6 (Supported at early development stage)
+- Vulkan: 1.2 (Supported at early development stage)
+- DirectX: 11 (Supported at later development stage)
 - DirectX: 12 (Planned, not confirmed)
 - Metal: (Support through moltenVK)
 

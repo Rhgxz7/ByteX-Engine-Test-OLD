@@ -1,3 +1,2 @@
 # ByteX-Engine
-ByteX Game engine repository
-<img src="ByteX_Logo.png" alt="logo" width="200"/>
+<img src="ByteX_Logo.png" alt="logo" width="400"/>

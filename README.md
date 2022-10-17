@@ -36,8 +36,7 @@ __*Graphic APIs*__
       - Parallax Oculsion Mapping
       - PBR
       - Transparency
-      - Camera
-    
+      - Camera  
 - Raytracing 
       - Raytraced Lightning
       - Raytraced Shadows

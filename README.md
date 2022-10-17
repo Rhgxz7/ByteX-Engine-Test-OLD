@@ -1,5 +1,5 @@
 # ByteX-Engine
-<img src="ByteX_Logo.png" alt="logo" width="370"/>
+<img src="ByteX_Logo.png" alt="logo" width="380"/>
 
 
 ByteX is a general purpose, lightweight, data driven, multiplatform game engine writen in C++

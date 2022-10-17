@@ -26,7 +26,7 @@ __*Graphic APIs*__
 - Rendering 
       - Model Loading
       - Textures
-      - Lightnig
+      - Lightning
           - Point Light
           - Directional Light
           - Spot Light

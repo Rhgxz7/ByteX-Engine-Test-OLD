@@ -65,7 +65,7 @@ __*Graphic APIs*__
                   - Modular DLLs
             - Linux
                   - Single so
-                  - Mosular so
+                  - Modular so
 - Multithreading
 ```
 

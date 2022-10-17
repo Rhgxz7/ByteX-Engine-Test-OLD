@@ -39,15 +39,34 @@ __*Graphic APIs*__
       - Camera
     
 - Raytracing 
+      - Raytraced Lightning
+      - Raytraced Shadows
 - Antialising (MSAA)
 - High Dynamic Range (HDR)
 - Bloom
 - User Input
 - Audio (OpenCL)
+      - 3D audio
 - Networking
-- Lua Scripting
+      - Replication
+      - RPCs
+      - Message
+- Scripting
+      - Lua
+      - C++
 - Editor
+      - Graphical Editor
+      - Level Creator
+      - Model viewer
 - Exporting
+      - Platforms
+            - Windows
+                  - Single DLL
+                  - Modular DLLs
+            - Linux
+                  - Single so
+                  - Mosular so
+- Multithreading
 ```
 
  

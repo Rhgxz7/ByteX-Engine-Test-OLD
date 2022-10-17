@@ -13,7 +13,7 @@ __Why OpenGL support?__\
 Vulkan is the future of graphics, but right now it doesent support some older hardware. Beacuse of this the engine will
 support OpenGL.
 
-*Graphic APIs*
+__*Graphic APIs*__
 - OpenGL: 4.6 (Supported at early development state)
 - Vulkan: 1.2 (Supported at early development state)
 - DirectX: 11 (Supported at later development state)

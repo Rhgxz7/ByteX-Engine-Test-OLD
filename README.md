@@ -7,7 +7,7 @@ ByteX is a general purpose, lightweight, data driven, multiplatform game engine 
 # Information
 
 ByteX will initially support 3d rendering through OpenGL and Vulkan APIs.
-The engine will be initially developed in OpenGL and later ported to Vulkan and DirectX
+The engine will be initially developed in OpenGL and later ported to Vulkan and eventually DirectX
 
 __Why OpenGL support?__\
 Vulkan is the future of graphics, but right now it doesent support some older hardware. Beacuse of this the engine will

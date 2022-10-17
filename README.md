@@ -22,8 +22,7 @@ support OpenGL.
 
 
 # Features
-
-´´´
+```
 - Rendering 
       - Model Loading
       - Textures

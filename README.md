@@ -33,7 +33,7 @@ support OpenGL.
           - Ambient Light
       - Shadows
       - Normal Maps
-      - Parallax Oculsion Mappign
+      - Parallax Oculsion Mapping
       - PBR
       - Transparency
       - Camera

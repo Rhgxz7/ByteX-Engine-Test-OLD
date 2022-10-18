@@ -42,7 +42,19 @@ namespace byx {
 
         GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
         glShaderSource(fragmentShader, 1, &fragmentShaderSource, nullptr);
-        glCompileShader(fragmentShader);        
+        glCompileShader(fragmentShader);  
+
+        GLuint shaderProgram = glCreateProgram();
+
+        glAttachShader(shaderProgram, vertexShader);
+        glAttachShader(shaderProgram, fragmentShader);
+        glLinkProgram  (shaderProgram);     
+
+        glDeleteShader(vertexShader);
+        glDeleteShader(fragmentShader);
+
+        GLuint VBO;
+        glGenBuffers(1, &VBO); 
 
         glClearColor(0.50f, 0.13f, 0.17f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);

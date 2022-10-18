@@ -30,10 +30,6 @@ namespace byx {
             0.0f, 0.5f * float(sqrt(3)) * 2/ 3, 0.0f
         };
 
-        while(!byxWindow.shouldClose()) {
-            glfwPollEvents();
-        }
-
         glViewport(0,0,800,800);
 
         GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -69,9 +65,22 @@ namespace byx {
         glBindVertexArray(0);
 
 
-        glClearColor(0.50f, 0.13f, 0.17f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        glfwSwapBuffers(byxWindow.window);
+        while(!byxWindow.shouldClose()) {
+
+            glClearColor(0.50f, 0.13f, 0.17f, 1.0f);
+            glClear(GL_COLOR_BUFFER_BIT);
+            glUseProgram(shaderProgram);
+            glBindVertexArray(VAO);
+            glDrawArrays(GL_TRIANGLES, 0, 3);
+
+            glfwSwapBuffers(byxWindow.window);
+
+            glfwPollEvents();
+        }
+
+        glDeleteVertexArrays(1, &VAO);
+        glDeleteBuffers(1, &VBO);
+        glDeleteProgram(shaderProgram);
 
     }
 }

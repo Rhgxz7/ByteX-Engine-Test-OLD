@@ -2,5 +2,5 @@
 all:
 	+$(MAKE) -C src
 
-test:
+check:
 	printf test

@@ -41,6 +41,13 @@ namespace byx {
         glDeleteShader(vertexShader);
         glDeleteShader(fragmentShader);
     }
+    
+    void Shader::activate() {
+        glUseProgram(ID);
+    }
 
+    void Shader::destroy() {
+        glDeleteProgram(ID);
+    }
 
 }

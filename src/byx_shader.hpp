@@ -19,7 +19,7 @@ namespace byx {
         Shader(const char* vertexF, const char* fragmentF);
 
         void activate();
-        void delete();
+        void destroy();
 
     };
 }

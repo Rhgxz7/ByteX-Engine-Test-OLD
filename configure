@@ -3,5 +3,7 @@ CXXFLAGS=-g       # C++ complilation flags
 NATIVE=on        # compiles code targeted to current hardware
 TUNE=generic     # performance-tuning switch
 
+sudo apt-get update
 sudo apt-get install libglfw3
 sudo apt-get install libglfw3-dev
+sudo apt-get install libglew-dev

@@ -36,6 +36,10 @@ namespace byx {
             std::cerr << "\nYour GPU might not be compatible with OpenGL" << std::endl;
             glfwTerminate();
         }
+
+        if (glewInit() != GLEW_OK) {
+            std::cerr << "\n Failed to init GLEW\n" << std::endl;
+        }
 }
 
     bool ByxWindow::shouldClose() {

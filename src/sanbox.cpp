@@ -40,7 +40,7 @@ namespace byx {
             5, 4, 1
         };
 
-        glViewport(0,0,800,600);
+        glViewport(0,0,800,800);
 
         GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
         glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr);

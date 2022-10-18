@@ -1,7 +1,10 @@
 #include "sandbox.hpp"
 #include <math.h>
 
-// Vertex Shader source code
+#include "byx_shader.hpp"
+#include "byx_VAO.hpp"
+#include "byx_VBO.hpp"
+#include "byx_EBO.hpp"
 
 
 namespace byx {
@@ -29,50 +32,44 @@ namespace byx {
 
         glViewport(0,0,800,800);
 
-        GLuint VAO, VBO, EBO;
+        Shader shaderProgram("default.vert", "default.frag");
 
-        glGenVertexArrays(1, &VAO);
-        glGenBuffers(1, &VBO); 
-        glGenBuffers(1, &EBO);
 
-        glBindVertexArray(VAO);
 
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	    
+	    VAO VAO1;
+	    VAO1.bind();
 
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	    
+	    VBO VBO1(vertices, sizeof(vertices));
+	    
+	    EBO EBO1(indices, sizeof(indices));
 
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3*sizeof(float), (void*)0);
-        glEnableVertexAttribArray(0);
-
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-        glBindVertexArray(0);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	    
+	    VAO1.linkVBO(VBO1, 0);
+	    
+	    VAO1.unbind();
+	    VBO1.unbind();
+	    EBO1.unbind();
 
 
         while(!byxWindow.shouldClose()) {
 
-            glClearColor(0.50f, 0.13f, 0.17f, 1.0f);
-
-            glClear(GL_COLOR_BUFFER_BIT);
-
-            glUseProgram(shaderProgram);
-
-            glBindVertexArray(VAO);
-
-            glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
-
-            glfwSwapBuffers(byxWindow.window);
-
-            glfwPollEvents();
+            
+		    glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+		
+		    glClear(GL_COLOR_BUFFER_BIT);
+		
+		    shaderProgram.activate();
+		
+		    VAO1.bind();
+		
+		    glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
+		
+		    glfwSwapBuffers(byxWindow.window);
+		
+		    glfwPollEvents();
         }
-
-        glDeleteVertexArrays(1, &VAO);
-        glDeleteBuffers(1, &VBO);
-        glDeleteBuffers(1, &EBO);
-        glDeleteProgram(shaderProgram);
 
     }
 }

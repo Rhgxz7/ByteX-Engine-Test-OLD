@@ -14,7 +14,7 @@ namespace byx {
 
     class Shader {
 
-        public: 
+        public:  
         GLuint ID;
         Shader(const char* vertexF, const char* fragmentF);
 

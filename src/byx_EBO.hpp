@@ -14,7 +14,7 @@ namespace byx {
         
             void bind();
             void unbind();
-            void dstroy();
+            void destroy();
         };
 
 }

@@ -29,6 +29,8 @@ namespace byx {
 
         window = glfwCreateWindow(width, height, windowName.c_str(), nullptr, nullptr);
 
+        glfwMakeContextCurrent(window); 
+
         if( window == NULL ){
             std::cerr << "\nError creating window" << std::endl;
             std::cerr << "\nYour GPU might not be compatible with OpenGL" << std::endl;

@@ -2,7 +2,7 @@
 
 namespace byx {
 
-    std::string file(const char* file) {
+    std::string readShaderFile(const char* file) {
         std::ifstream in(file, std::ios::binary);
 
         if(in) {
@@ -15,6 +15,14 @@ namespace byx {
             return(read);
         }
         throw(errno);
+    }
+
+    Shader::Shader(const char* vertexF, const char* fragmentF) {
+        std::string vertexShaderFile = readShaderFile(vertexF);
+        std::string fragmentShaderFile = readShaderFile(fragmentF);
+
+        const char* vertexShaderSrc = vertexShaderFile.c_str();
+        const char* fragmentShaderSrc = fragmentShaderFile.c_str();
     }
 
 

@@ -56,6 +56,9 @@ namespace byx {
         GLuint VBO;
         glGenBuffers(1, &VBO); 
 
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+
         glClearColor(0.50f, 0.13f, 0.17f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(byxWindow.window);

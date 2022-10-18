@@ -66,6 +66,8 @@ __*Graphic APIs*__
                   - Single so
                   - Modular so
 - Multithreading
+- Physics
+- VR Support
 ```
 
  

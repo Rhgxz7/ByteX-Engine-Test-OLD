@@ -47,6 +47,7 @@ namespace byx {
 	    VAO1.unbind();
 	    VBO1.unbind();
 	    EBO1.unbind();
+        
 
 
         while(!byxWindow.shouldClose()) {

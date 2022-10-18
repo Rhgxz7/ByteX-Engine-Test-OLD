@@ -15,9 +15,12 @@ namespace byx {
 
         public:
         ByxWindow(int w, int h, std::string name);
+        GLFWwindow getWindow();
         ~ByxWindow();
 
         bool shouldClose();
+
+        GLFWwindow *window;
 
         private:
 
@@ -26,7 +29,6 @@ namespace byx {
         const int width;
         const int height;
         std::string windowName;
-        GLFWwindow *window;
-
+        
     };
 }

@@ -11,9 +11,6 @@ namespace byx {
 
     void Sandbox::run() {
 
-        
-
-
         GLfloat vertices[] = {
 
             -0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
@@ -33,9 +30,6 @@ namespace byx {
         glViewport(0,0,800,800);
 
         Shader shaderProgram("default.vert", "default.frag");
-
-
-
 	    
 	    VAO VAO1;
 	    VAO1.bind();
@@ -71,5 +65,9 @@ namespace byx {
 		    glfwPollEvents();
         }
 
+        VAO1.destroy();
+	    VBO1.destroy();
+	    EBO1.destroy();
+	    shaderProgram.destroy();
     }
 }

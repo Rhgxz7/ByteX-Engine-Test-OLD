@@ -27,6 +27,8 @@ namespace byx {
             5, 4, 1
         };
 
+        glfwMakeContextCurrent(byxWindow.window);
+
         glViewport(0,0,800,800);
 
         Shader shaderProgram("gltriangle.vert", "gltriangle.frag");

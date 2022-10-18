@@ -35,6 +35,15 @@ namespace byx {
         }
 
         glViewport(0,0,800,800);
+
+        GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+        glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr);
+        glCompileShader(vertexShader);
+
+        GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+        glShaderSource(fragmentShader, 1, &fragmentShaderSource, nullptr);
+        glCompileShader(fragmentShader);        
+
         glClearColor(0.50f, 0.13f, 0.17f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(byxWindow.window);

@@ -1,4 +1,5 @@
 #include "sandbox.hpp"
+#include <math.h>
 
 // Vertex Shader source code
 const char* vertexShaderSource = "#version 330 core\n"
@@ -19,14 +20,24 @@ namespace byx {
 
     void Sandbox::run() {
 
-        glViewport(0,0,800,800);
-        glClearColor(0.50f, 0.13f, 0.17f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        glfwSwapBuffers(byxWindow.window);
+        
+
+
+        GLfloat vertices[] = 
+        {
+            -0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
+            0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
+            0.0f, 0.5f * float(sqrt(3)) * 2/ 3, 0.0f
+        };
 
         while(!byxWindow.shouldClose()) {
             glfwPollEvents();
         }
+
+        glViewport(0,0,800,800);
+        glClearColor(0.50f, 0.13f, 0.17f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        glfwSwapBuffers(byxWindow.window);
 
     }
 }

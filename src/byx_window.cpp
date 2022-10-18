@@ -11,6 +11,7 @@ namespace byx {
     ByxWindow::ByxWindow(int w, int h, std::string name) :
         width{w}, height{h}, windowName{name} {
             initWindow();
+            // hi
     }
 
     ByxWindow::~ByxWindow() {

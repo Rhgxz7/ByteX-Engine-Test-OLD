@@ -1,8 +1,5 @@
 #include "byx_window.hpp"
 
-#define GLEW_STATIC
-#include <GL/glew.h>   
-
 #include <iostream>
 #include <stdexcept>
 

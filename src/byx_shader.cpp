@@ -23,6 +23,23 @@ namespace byx {
 
         const char* vertexShaderSrc = vertexShaderFile.c_str();
         const char* fragmentShaderSrc = fragmentShaderFile.c_str();
+
+        GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+        glShaderSource(vertexShader, 1, &vertexShaderSrc, nullptr);
+        glCompileShader(vertexShader);
+
+        GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+        glShaderSource(fragmentShader, 1, &fragmentShaderSrc, nullptr);
+        glCompileShader(fragmentShader);  
+
+        ID = glCreateProgram();
+
+        glAttachShader(ID, vertexShader);
+        glAttachShader(ID, fragmentShader);
+        glLinkProgram(ID);     
+
+        glDeleteShader(vertexShader);
+        glDeleteShader(fragmentShader);
     }
 
 

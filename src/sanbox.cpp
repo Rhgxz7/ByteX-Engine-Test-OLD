@@ -29,23 +29,6 @@ namespace byx {
 
         glViewport(0,0,800,800);
 
-        GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
-        glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr);
-        glCompileShader(vertexShader);
-
-        GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-        glShaderSource(fragmentShader, 1, &fragmentShaderSource, nullptr);
-        glCompileShader(fragmentShader);  
-
-        GLuint shaderProgram = glCreateProgram();
-
-        glAttachShader(shaderProgram, vertexShader);
-        glAttachShader(shaderProgram, fragmentShader);
-        glLinkProgram(shaderProgram);     
-
-        glDeleteShader(vertexShader);
-        glDeleteShader(fragmentShader);
-
         GLuint VAO, VBO, EBO;
 
         glGenVertexArrays(1, &VAO);

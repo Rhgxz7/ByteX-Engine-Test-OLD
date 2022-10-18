@@ -4,3 +4,6 @@ all:
 
 check:
 	printf test
+
+distcheck:
+	printf test

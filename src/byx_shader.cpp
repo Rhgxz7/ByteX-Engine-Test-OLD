@@ -2,24 +2,25 @@
 
 namespace byx {
 
-    std::string readShaderFile(const char* file) {
-        std::ifstream in(file, std::ios::binary);
-
-        if(in) {
-            std::string read;
-            in.seekg(0, std::ios::end);
-            read.resize(in.tellg());
-            in.seekg(0, std::ios::beg);
-            in.read(&read[0], read.size());
-            in.close();
-            return(read);
-        }
-        throw(errno);
-    }
+    std::string get_file_contents(const char* filename)
+{
+	std::ifstream in(filename, std::ios::binary);
+	if (in)
+	{
+		std::string contents;
+		in.seekg(0, std::ios::end);
+		contents.resize(in.tellg());
+		in.seekg(0, std::ios::beg);
+		in.read(&contents[0], contents.size());
+		in.close();
+		return(contents);
+	}
+	throw(errno);
+}
 
     Shader::Shader(const char* vertexF, const char* fragmentF) {
-        std::string vertexShaderFile = readShaderFile(vertexF);
-        std::string fragmentShaderFile = readShaderFile(fragmentF);
+        std::string vertexShaderFile = get_file_contents(vertexF);
+        std::string fragmentShaderFile = get_file_contents(fragmentF);
 
         const char* vertexShaderSrc = vertexShaderFile.c_str();
         const char* fragmentShaderSrc = fragmentShaderFile.c_str();

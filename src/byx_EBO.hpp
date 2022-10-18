@@ -7,14 +7,14 @@ namespace byx {
         class EBO {
             public:
 
-            GLuint ID;
+                GLuint ID;
         
-            EBO(GLuint* indices, GLsizeiptr size);
+                EBO(GLuint* indices, GLsizeiptr size);
 
         
-            void bind();
-            void unbind();
-            void destroy();
+                void bind();
+                void unbind();
+                void destroy();
         };
 
 }

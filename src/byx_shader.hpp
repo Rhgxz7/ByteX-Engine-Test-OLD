@@ -8,7 +8,7 @@
 
 #include <GL/glew.h>
 
-std::string readShaderFile(const char* file);
+std::string get_file_contents(const char* file);
 
 namespace byx {
 

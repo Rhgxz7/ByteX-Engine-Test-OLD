@@ -29,7 +29,7 @@ namespace byx {
 
         glViewport(0,0,800,800);
 
-        Shader shaderProgram("default.vert", "default.frag");
+        Shader shaderProgram("gltriangle.vert", "gltriangle.frag");
 	    
 	    VAO VAO1;
 	    VAO1.bind();

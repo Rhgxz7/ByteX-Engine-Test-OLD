@@ -1,5 +1,8 @@
 #include "byx_window.hpp"
 
+#include <iostream>
+#include <stdexcept>
+
 namespace byx {
 
     ByxWindow::ByxWindow(int w, int h, std::string name) :
@@ -22,9 +25,13 @@ namespace byx {
         glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
         window = glfwCreateWindow(width, height, windowName.c_str(), nullptr, nullptr);
-         
 
-    }
+        if( window == NULL ){
+            std::cerr << "\nError creating window" << std::endl;
+            std::cerr << "\nYour GPU might not be compatible with OpenGL" << std::endl;
+            glfwTerminate();
+        }
+}
 
     bool ByxWindow::shouldClose() {
         return glfwWindowShouldClose(window);

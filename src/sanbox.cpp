@@ -26,14 +26,13 @@ namespace byx {
             3, 2, 4,
             5, 4, 1
         };
-		
+
     	glViewport(0,0,800,800);
 
         Shader shaderProgram("gltriangle.vert", "gltriangle.frag");
 	    
 	    VAO VAO1;
 	    VAO1.bind();
-
 
 	    VBO VBO1(vertices, sizeof(vertices));
 	    

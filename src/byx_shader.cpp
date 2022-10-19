@@ -2,20 +2,25 @@
 
 namespace byx {
 
-    std::string get_file_contents(const char* filename)
+    const GLchar* get_file_contents(const GLchar* pathToFile)
 {
-	std::ifstream in(filename, std::ios::binary);
-	if (in)
-	{
-		std::string contents;
-		in.seekg(0, std::ios::end);
-		contents.resize(in.tellg());
-		in.seekg(0, std::ios::beg);
-		in.read(&contents[0], contents.size());
-		in.close();
-		return(contents);
-	}
-	throw(errno);
+    std::string content;
+    std::ifstream fileStream(pathToFile, std::ios::in);
+
+    if(!fileStream.is_open()) {
+        std::cerr << "Could not read file " << pathToFile << ". File does not exist." << std::endl;
+        return "";
+    }
+
+    std::string line = "";
+    while(!fileStream.eof()) {
+        std::getline(fileStream, line);
+        content.append(line + "\n");
+    }
+
+    fileStream.close();
+    std::cout << "'" << content << "'" << std::endl;
+    return content.c_str();
 }
 
     Shader::Shader(const char* vertexF, const char* fragmentF) {

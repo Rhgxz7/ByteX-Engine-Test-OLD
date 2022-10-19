@@ -1,4 +1,4 @@
-ByteX TEST (READ INFORMATION SECTION)
+# ByteX TEST (**READ** INFORMATION SECTION)
 <img style="text-align:center;" src="ByteX_Logo.png" alt="logo" width="380"/>
 
 

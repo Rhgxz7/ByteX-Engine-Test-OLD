@@ -7,8 +7,10 @@ ByteX is a general purpose, lightweight, data driven, multiplatform game engine 
 # Information (IMPORTANT PLEASE READ)
 ## BytexEngine has been moved to Rhgxz7/ByteX
 - This first repo was to test if the project was feasible, and to learn how to use git and github
-- Now that I think is possible, I want to take this project more **serious** 
-- From now own in the new repo commits will be treated as safe snapshots of the program and not as changes
+- Now that I think is possible, I want to take this project more **SEROIUS** 
+- From now on, in the new repo commits will be treated as safe snapshots of the program and not as changes
+- The new repo: https://github.com/Rhgxz7/ByteX
+
 
 #
 #

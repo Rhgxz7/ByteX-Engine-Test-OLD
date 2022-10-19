@@ -1,24 +1,15 @@
-# ByteX-Engine
+ByteX TEST (READ INFORMATION SECTION)
 <img style="text-align:center;" src="ByteX_Logo.png" alt="logo" width="380"/>
 
 
 ByteX is a general purpose, lightweight, data driven, multiplatform game engine writen in C++
 
-# Information
+# Information (IMPORTANT PLEASE READ)
+## BytexEngine has been moved to Rhgxz7/ByteX
+This first repo was to test if the project was feasible, and to learn how to use git and github
+Now that I think is possible, I want to take this project more **serious** 
+From now own in the new repo commits will be treated as safe snapshots of the program and not as changes
 
-ByteX will initially support 3d rendering through OpenGL and Vulkan APIs.
-The engine will be initially developed in OpenGL and later ported to Vulkan and eventually DirectX
-
-__Why OpenGL support?__\
-Vulkan is the future of graphics, but right now it doesent support some older hardware. Beacuse of this the engine will
-support OpenGL.
-
-__*Graphic APIs*__
-- OpenGL: 4.6 (Supported at early development stage)
-- Vulkan: 1.2 (Supported at early development stage)
-- DirectX: 11 (Supported at later development stage)
-- DirectX: 12 (Planned, not confirmed)
-- Metal: (Support through moltenVK)
 
 
 # Features
